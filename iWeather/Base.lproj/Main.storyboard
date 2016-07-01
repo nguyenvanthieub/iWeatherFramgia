@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dDT-Sq-3gU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="BJf-Oq-j6h">
+                                <rect key="frame" x="0.0" y="531" width="320" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="6is-dv-ZBk"/>
+                                </constraints>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbi-Y3-MgX">
+                                <rect key="frame" x="20" y="30" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BJf-Oq-j6h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7jd-4b-fTE"/>
+                            <constraint firstItem="dDT-Sq-3gU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JrV-7S-tD1"/>
+                            <constraint firstItem="dDT-Sq-3gU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Lbw-xk-z3R"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dDT-Sq-3gU" secondAttribute="bottom" id="dVB-Dl-3JI"/>
+                            <constraint firstAttribute="trailing" secondItem="BJf-Oq-j6h" secondAttribute="trailing" id="fye-Mm-6Ju"/>
+                            <constraint firstAttribute="trailing" secondItem="dDT-Sq-3gU" secondAttribute="trailing" id="hyB-pc-UU7"/>
+                            <constraint firstAttribute="trailing" secondItem="Hbi-Y3-MgX" secondAttribute="trailing" constant="20" id="tAh-XW-MuK"/>
+                            <constraint firstItem="Hbi-Y3-MgX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="uvH-Eq-Fh9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BJf-Oq-j6h" secondAttribute="bottom" id="vu4-w0-4XN"/>
+                            <constraint firstItem="Hbi-Y3-MgX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ysT-Nc-KEc"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="labelCity" destination="Hbi-Y3-MgX" id="Cki-L0-AxA"/>
+                        <outlet property="pageController" destination="BJf-Oq-j6h" id="hwY-vg-0aD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187" y="215"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="8lQ-ie-ANc">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="hBb-bh-gco" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z23-e9-5UE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="550" y="215"/>
+        </scene>
+        <!--Today View Controller-->
+        <scene sceneID="zDT-sW-guA">
+            <objects>
+                <viewController storyboardIdentifier="TodayViewController" id="5gY-QT-8sR" customClass="TodayViewController" customModule="iWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eDc-xa-cMb"/>
+                        <viewControllerLayoutGuide type="bottom" id="pHn-6C-024"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xzq-5h-bfw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5d-L4-XeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="912" y="215"/>
+        </scene>
+        <!--Everyday View Controller-->
+        <scene sceneID="WON-jO-yzd">
+            <objects>
+                <viewController storyboardIdentifier="EverydayViewController" id="3hW-2A-0oK" customClass="EverydayViewController" customModule="iWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p5d-3F-C1I"/>
+                        <viewControllerLayoutGuide type="bottom" id="pro-uj-4rH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tjq-Yy-FAV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vvs-pu-oa3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256" y="215"/>
+        </scene>
+        <!--Every Hour View Controller-->
+        <scene sceneID="WBH-NI-vEX">
+            <objects>
+                <viewController storyboardIdentifier="EveryHourViewController" id="gVG-wY-kKn" customClass="EveryHourViewController" customModule="iWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w1i-mP-uGF"/>
+                        <viewControllerLayoutGuide type="bottom" id="kkk-9z-Dcn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MTN-xO-bkh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUe-w5-3kk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616" y="215"/>
+        </scene>
+        <!--Factories Location View Controller-->
+        <scene sceneID="Hzp-ZQ-GVB">
+            <objects>
+                <viewController storyboardIdentifier="FactoriesLocationViewController" id="doq-DP-aac" customClass="FactoriesLocationViewController" customModule="iWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q5m-wv-Su3"/>
+                        <viewControllerLayoutGuide type="bottom" id="DgI-qu-qKZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="09N-tV-Gum">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbs-Vr-82c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1972" y="215"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="page1.jpg" width="1024" height="768"/>
+    </resources>
+</document>
